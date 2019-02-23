@@ -13,6 +13,9 @@ Easy Mode:
 ![Easy Mode ScreenShot][easy screenshot]
 Hard Mode:
 ![Hard Mode ScreenShot][hard screenshot]
+Game Win:
+![Win Screenshot][win screenshot]
 
 [easy screenshot]: https://github.com/tyler-simmons/color-game/blob/master/screenshots/color-game-easy.png?raw=true
 [hard screenshot]: https://github.com/tyler-simmons/color-game/blob/master/screenshots/color-game-hard.png?raw=true
+[win screenshot]: https://github.com/tyler-simmons/color-game/blob/master/screenshots/color-game-win.png?raw=true
