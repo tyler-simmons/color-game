@@ -27,6 +27,7 @@ function init(){
 function setupModeButtons(){
 	for (var i = 0; i < modeButtons.length; i++){
 		modeButtons[i].addEventListener("click", function(){
+			
 			//on click
 			//reset both displays of selected class
 			modeButtons[0].classList.remove("selected");
@@ -46,8 +47,21 @@ function setupSquares(){
 	for(var i = 0; i < squares.length; i++){
 		//add click listeners to squares
 		squares[i].addEventListener("click", function() {
+			console.log('clicked square');
 			//grab color of clicked squares
-			var clickedColor = this.style.background;
+			let clickedColor = this.style.background;
+			
+				let j = 0;
+				while (j < clickedColor.length) {
+					
+					if (clickedColor.charAt(j) === ')') {
+						clickedColor = clickedColor.substring(0,j+1);
+						break;
+					}
+					j++;
+				}
+			
+			console.log(`clickedColor is ${clickedColor}`);
 			//compare color to pickedColor
 			if(clickedColor === pickedColor) {
 				messageDisplay.textContent = "Correct!";
@@ -137,4 +151,5 @@ function randomColor() {
 	//pick a "blue" from 0 - 255
 	var b = Math.floor(Math.random() * 256);
 	return "rgb(" + r + ", " + g + ", " + b + ")";
+	//return `rgb(${r}, ${g}, ${b})`;
 }
